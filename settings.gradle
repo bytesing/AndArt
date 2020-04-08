@@ -1,2 +1,4 @@
 rootProject.name='AndArt'
 include ':app'
+include ':aaipc'
+include ':andutil'

@@ -1,0 +1,5 @@
+本节主要是对ANDROID现有的IPC方式进行总结
+常见系统的IPC机制：
+1、WIN：剪贴板、管道、邮槽
+2、LINUX:命名管道、共享内存、信号量
+3、ANDROID:Binder
