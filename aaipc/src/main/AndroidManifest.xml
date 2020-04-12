@@ -1,7 +1,14 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bytesing.andart.aaipc" >
+    <permission android:name="com.bytesing.andart.aaipc.ACCESS_BOOK_SERVICE"
+        android:protectionLevel="normal"/>
     <application>
         <service android:name=".service.MessengerService"
             android:process=":remote"/>
+        <service android:name=".aidl.service.BookManagerService"
+            android:process=":remote"/>
+        <activity
+            android:name=".aidl.activity.BookManagerActivity"
+            android:theme="@style/AppTheme.NoActionBar"/>
     </application>
 </manifest>

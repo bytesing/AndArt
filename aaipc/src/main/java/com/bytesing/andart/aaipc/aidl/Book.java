@@ -2,6 +2,7 @@ package com.bytesing.andart.aaipc.aidl;
 
 import android.os.Parcel;
 import android.os.Parcelable.Creator;
+import android.support.annotation.NonNull;
 
 /**
  * Created by <a href="mailto:lichuangxin@kugou.net">chuangxinli(Icebug)</a> on 2020/4/6.
@@ -22,6 +23,20 @@ public class Book implements android.os.Parcelable {
     }
 
     public Book() {
+    }
+
+    public Book(int bookId, String bookName) {
+        mBookId = bookId;
+        mBookName = bookName;
+    }
+
+    @NonNull
+    @Override
+    public String toString() {
+        return "{"+
+                "\"bookId\":"+mBookId+
+                ",\"bookName\":"+"\""+mBookName+"\""
+                +"}";
     }
 
     protected Book(Parcel in) {
